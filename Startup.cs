@@ -26,6 +26,8 @@ namespace ProBootStrapFramework
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseStaticFiles();
+
             app.UseMvc(rotas => 
             {
                 rotas.MapRoute(name:"default", template:"{Controller=home}/{action=Index}");
