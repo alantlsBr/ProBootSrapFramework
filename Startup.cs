@@ -15,6 +15,7 @@ namespace ProBootStrapFramework
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -25,9 +26,9 @@ namespace ProBootStrapFramework
                 app.UseDeveloperExceptionPage();
             }
 
-            app.Run(async (context) =>
+            app.UseMvc(rotas => 
             {
-                await context.Response.WriteAsync("Hello World!");
+                rotas.MapRoute(name:"default", template:"{Controller=home}/{action=Index}");
             });
         }
     }
