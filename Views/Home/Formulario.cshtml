@@ -1,19 +1,87 @@
 ﻿<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title>Pro</title>
-    <link href="~/lib/twitter-bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-</head>
-<body>
 
-    <form action="/" method="post">
-        
-        <input type="text" />
-        
-        <input class="btn btn-primary" type="submit" value="Salvar" />
+    <head>
 
-    </form>
+        <meta charset="utf-8" />
+        <title>Formulario - Pro</title>
+        <link href="~/lib/twitter-bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
-    <script src="~/lib/jquery/jquery.min.js"></script>
-    <script src="~/lib/twitter-bootstrap/js/bootstrap.min.js"></script>
-</body>
+    </head>
+
+    <body>
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="col-6  offset-3">
+
+                    <form action="/" method="post">
+
+                        <div class="form-group">
+                            <label for="Nome">Nome</label>
+                            <input type="text" id="Nome" class="form-control" placeholder="Nome" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Email">E-mail</label>
+                            <input type="email" id="Email" class="form-control" placeholder="exemplo@email.com" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Senha">Senha</label>
+                            <input type="password" class="form-control" id="Senha" name="Senha" placeholder="Senha">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Data">Data</label>
+                            <input type="date" class="form-control" id="Data" name="Data" placeholder="Data">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Range">Range</label>
+                            <input type="range" min="0" max="99" class="form-control-range" id="Range" name="Range">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="UF">Estado</label>
+                            <select class="form-control" id="UF">
+                                <option>MT</option>
+                                <option>MS</option>
+                                <option>SP</option>
+                                <option>RJ</option>
+                                <option>TO</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Foto">Foto</label>
+                            <input type="file" class="form-control-file" id="Foto">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Endereco">Endereco</label>
+                            <input type="text" class="form-control" id="Endereco" name="Endereco" placeholder="Endereço" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Numero">Número</label>
+                            <input type="number" min="10" max="99" class="form-control" id="Numero" name="Numero" placeholder="Número">
+                        </div>
+
+                        <section class="row justify-content-center mb-5">
+                            <input class="btn btn-lg btn-primary" type="submit" value="Cadastrar" />
+                        </section>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="~/lib/jquery/jquery.min.js"></script>
+        <script src="~/lib/twitter-bootstrap/js/bootstrap.min.js"></script>
+
+    </body>
+
 </html>
